@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASIC</title>
+</head>
+<body>
+    <!-- Make 'hello World'   -->
+    <div id="app-1">
+        <p>{{ message }}</p><!--{{ MESSAGE }} will respond if there are changes to the property-->
+    </div>
+
+    <!-- Binding attribute on the element -->
+    <div id="app-2">
+        <!-- Binding Text -->
+        <span v-bind:title="thisBinding1">
+            <h3>Hover your mouse pointer over the text and wait a few moments to see the result.</h3>
+        </span>
+        <!-- Binding Date -->
+        <span v-bind:title="thisBinding2">
+            <h3 style="color: red;">Hover your mouse pointer over the current date</h3>
+        </span>
+    </div>
+
+    <!-- Condition and Iteration-->
+    <div id="app-3"> <!-- Make a Condition -->
+        <span v-if="condition1">
+            <h1>This text will appear if property 'condition1' is 'true'</h1>
+        </span>
+        <span v-if="condition2">
+            <h1>This text does not appear if property 'condition2' is 'false'</h1>
+        </span>
+    </div>
+    <div id="app-4"> <!-- Make a Interation -->
+        <ol>
+            <li v-for="iteration in iterations">
+                {{ iteration.text }}
+            </li>
+        </ol>
+    </div>
+
+    <!--Handling User Input-->
+    <div id="app-5"> <!--Working with Button-->
+        <p>{{ text }}</p>
+        <button v-on:click="reverseText">Reverse Text</button>
+    </div>
+    <div id="app-6"> <!--Working with Input Form-->
+        <p>{{ input }}</p>
+        <input v-model="input">
+    </div>
+   
+    <!--Compiling the Components-->
+    <div id="app-7">
+        <ol>
+          <todo-item
+            v-for="item in groceries"
+            v-bind:todo="item"
+            v-bind:key="item.id"
+          ></todo-item>
+        </ol>
+    </div>
+
+    <script src="assets/vendor/vue.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

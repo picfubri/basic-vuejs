@@ -6,9 +6,21 @@
     <title>BASIC</title>
 </head>
 <body>
-
-    <div id="app-1">
-        
+    <!--Interpolation-->
+    <div id="app-1"><!--Text-->
+        <span>{{ text }}</span><br>
+        <span v-once>{{ text1 }}</span>
+    </div>
+    <div id="app-2"><!--Raw HTML-->
+        <p>This text with mustache symbols: {{ rawHTML }}</p>
+        <p style="color: tomato;">This text with v-html directive: <span v-html="rawHTML"></span>
+    </div>
+    <div id="app-3"><!--Attribute-->
+        <div
+            class="static"
+            v-bind:class="{ active: isActive, 'text-danger': hasError }"
+            >
+        </div>
     </div>
 
     <script src="assets/vendor/vue.js"></script>

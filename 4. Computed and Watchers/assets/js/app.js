@@ -14,7 +14,17 @@ var app = new Vue({ // Light Logic
         reversedMessage: function() {
             return this.message.split('').reverse().join('')
         }
+    },
+    methods: {
+        reverseMessage: function () {
+            return this.message.split('').reverse().join('')
+        }
     }
+})
+
+var app = new Vue({ // Computed Cache vs Metode
+    el:'#computedCache',
+    
 })
 
 /* To Be Continued */

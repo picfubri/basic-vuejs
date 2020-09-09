@@ -12,8 +12,10 @@
     </div>
     <div id="lightLogic">
         <p>Original message: "{{ message }}"</p>
-        <p>reverse message that is counted: "{{ reversedMessage }}"</p>
+        <p>reverse message that is counted <i>(with computed)</i>: "{{ reversedMessage }}"</p>
+        <p>Resverse Message with Methods: {{ reverseMessage() }}</p>
     </div>
+
 
     <script src="assets/vendor/vue.js"></script>
     <script src="assets/js/app.js"></script>

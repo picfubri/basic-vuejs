@@ -29,9 +29,9 @@ var app = new Vue({ // Light Logic
 var app = new Vue({ // Watch
     el:'#computedWatch', 
     data:{ 
-       firstName: 'Iqbal Ali',
-       lastName: 'Sofyan',
-       fullName: 'Iqbal Ali Sofyan'
+       firstName: 'Bang',
+       lastName: 'IAS',
+       fullName: 'BangIAS'
     },
     watch:{
         firstName: function(val) {
@@ -46,8 +46,8 @@ var app = new Vue({ // Watch
 var app = new Vue({ // Computed
     el:'#computedWatch1', 
     data:{ 
-       firstName: 'Iqbal Ali',
-       lastName: 'Sofyan'
+       firstName: 'Bang',
+       lastName: 'IAS'
     },
     computed:{
        fullName: function() {

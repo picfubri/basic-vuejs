@@ -50,9 +50,19 @@ var app = new Vue({ // Computed
        lastName: 'IAS'
     },
     computed:{
-       fullName: function() {
+        fullName: {
+            get: function() {
+                return this.fullName + ' ' + this.lastName
+            },
+            set: function() {
+                var names = newValue.split(' ')
+                this.firstName = name[0]
+                this.lastName = name[name.length - 1]
+            }
+        }
+       /*fullName: function() {
             return this.firstName + ' ' + this.lastName
-       }
+       }*/
     }
 })
 /* To Be Continued */

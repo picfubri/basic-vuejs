@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASIC</title>
+</head>
+<body>
+    
+    <!-- v-bind:class directive -->
+    <div class="static" v-bind:class="{active: isActive, 'text-danger': hasError}"></div>
+
+    <!-- v-bind:class directive with computed -->
+    <div class="object" v-bind:class="classObject"></div>
+
+    <!-- This will always apply errorClass, and will only apply activeClass when isActive is true. -->
+    <div class="arTrnary" 
+        v-bind:class="[isActive ? activeClass: '', errorClass]"
+    ></div>
+
+    <script src="assets/vendor/vue.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

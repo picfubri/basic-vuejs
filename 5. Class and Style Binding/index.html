@@ -15,9 +15,11 @@
 
     <!-- This will always apply errorClass, and will only apply activeClass when isActive is true. -->
     <div class="arTrnary" 
-        v-bind:class="[isActive ? activeClass: '', errorClass]"
+        v-bind:class="[isActive ? activeClass : '', errorClass]"
     ></div>
-
+    <!--<div class="arTrnary" v-binnd:class="[{active:isActive}, errorClass]"></div>-->
+    <!--<div class="arTrnary" v-bind:class="[activeClass, errorClass]"></div>-->
+    
     <script src="assets/vendor/vue.js"></script>
     <script src="assets/js/app.js"></script>
 </body>

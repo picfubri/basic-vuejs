@@ -34,4 +34,14 @@ var app = new Vue({
     }
 })
 
-//ContinueToTorrow
+var app = new Vue({
+    el:'#component',
+    Vue.component('button-counter', {
+        data: function () {
+          return {
+            count: 0
+          }
+        },
+        template: '<button v-on:click="count++">Anda mengklik saya {{ count }} kali.</button>'
+      })
+})
